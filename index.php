@@ -1,12 +1,14 @@
 <html>
-
     <head>
         <meta charset="utf-8" />
-        <title>Test</title>
+        <title>Personal Website - Malte Bliefernicht</title>
+        <link rel="stylesheet" href="CSS/main.css" />
     </head>
-    
     <body>
-        JOOOO!
+        <?php include ("./templates/menubar.php") ?> 
+        
+        <div class="content">
+        
+        </div>
     </body>
-
 </html>

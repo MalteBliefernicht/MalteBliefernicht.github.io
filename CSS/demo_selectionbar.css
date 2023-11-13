@@ -1,0 +1,33 @@
+.demo-selection {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    background-color: black;
+    border-radius: 35px;
+    border: 10px solid #dfe4eb;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 400px;
+    max-width: 800px;
+}
+
+.demo-selection a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    height: inherit;
+}
+
+.demo-selection a:hover {
+    background-color: #a3c1d6;
+}
