@@ -104,15 +104,14 @@ class Circle {
     }
 }
 
-var canvas = document.getElementById("canvas");
+var canvas = document.getElementById("canvas-demo");
 var context = canvas.getContext("2d");
 context.translate(0.5, 0.5);
 var canvasContainer = document.getElementById("canvas-container");
 var cs = getComputedStyle(canvasContainer);
 canvas.width = canvasContainer.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
 canvas.height = canvasContainer.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
-
-console.log(canvas.width);
+var startButton = document.getElementById("demo-startbutton");
 
 var lineOffset = 10;
 var lineLength = 10;
@@ -128,27 +127,35 @@ for (var x = lineOffset; x < canvas.width; x += (lineLength * 2)) {
     }
 }
 
-canvas.addEventListener('mouseover', function(event) {
-    intervalID = setInterval(draw, 5);
+startButton.addEventListener('click', function(event) {
+    draw();
+    start();
+    startButton.remove();
 });
 
-canvas.addEventListener('mouseout', function(event) {
-    clearInterval(intervalID);
-});
-
-canvas.addEventListener('mousemove', function(event) {
-    var pos = getMousePos(canvas, event);
-    headsArray.forEach((head) => {
-        head.setMouseCoords(pos.x, pos.y);
+function start() {
+    canvas.addEventListener('mouseover', function(event) {
+        intervalID = setInterval(draw, 5);
     });
-});
 
-canvas.addEventListener('click', function(event) {
-    var pos = getMousePos(canvas, event);
-    var circle = new Circle(pos.x, pos.y, startRadius, endRadius);
-    circleAnimation(circle);
-    circlesArray.push(circle);
-});
+    canvas.addEventListener('mouseout', function(event) {
+        clearInterval(intervalID);
+    });
+
+    canvas.addEventListener('mousemove', function(event) {
+        var pos = getMousePos(canvas, event);
+        headsArray.forEach((head) => {
+            head.setMouseCoords(pos.x, pos.y);
+        });
+    });
+
+    canvas.addEventListener('click', function(event) {
+        var pos = getMousePos(canvas, event);
+        var circle = new Circle(pos.x, pos.y, startRadius, endRadius);
+        circleAnimation(circle);
+        circlesArray.push(circle);
+    });
+}
 
 function draw() {
     context.clearRect(0, 0, canvas.width, canvas.height);

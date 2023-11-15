@@ -21,6 +21,7 @@
     padding: 20px;
     width: 800px;
     height: 800px;
+    overflow: scroll;
 }
 
 .demo-container button {

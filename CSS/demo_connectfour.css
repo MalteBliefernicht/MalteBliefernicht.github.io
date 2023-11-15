@@ -23,6 +23,13 @@
     height: 800px;
 }
 
+.demo-container canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .demo-container button {
     position: absolute;
     top: 50%;

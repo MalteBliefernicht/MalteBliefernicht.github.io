@@ -4,7 +4,7 @@
         <title>Personal Website - Demos</title>
         <link rel="stylesheet" href="CSS/main.css" />
         <link rel="stylesheet" href="CSS/demo_selectionbar.css" />
-        <link rel="stylesheet" href="CSS/demo_cursor.css" />
+        <link rel="stylesheet" href="CSS/demo_connectfour.css" />
     </head>
     <body>
         <div class="menubar">
@@ -54,17 +54,18 @@
             </div>
             
             <div class="demo-description">
-                <h1>Follow The Cursor</h1>
-                <p>Eine simple Demo, die meine Fähigkeit zur Entwicklung von Algorithmen demonstrieren soll.</p>
-                <p>Start drücken und die kleinen Fähnchen mit dem Cursor "lenken". Betätigen der linken Maustaste löst einen Welleneffekt aus.</p>
+                <h1>Image Scaling</h1>
+                <p>Spiele "4-Gewinnt" gegen den Computer.</p>
+                <p>Hier habe ich ein Java Projekt von mir in Javascript übersetzt und an die Wiedergabe im Browser angepasst.</p>
             </div>
             
             <div class="demo-container" id="canvas-container">
-                <canvas id="canvas-demo"></canvas>
-                <button id="demo-startbutton">Start</button>
+                <canvas id="canvas-demo" width=800 height=800></canvas>
+                <input type="range" min="50" max="150" class="slider" id="demo-slider" />
+<!--                <button id="demo-startbutton">Start</button>-->
             </div>
         </div>
         
-        <script src="js/demo_cursor.js" type="text/javascript"></script>
+        <script src="js/demo_scaling.js" type="text/javascript"></script>
     </body>
 </html>
