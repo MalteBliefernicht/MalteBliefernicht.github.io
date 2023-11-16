@@ -4,7 +4,7 @@
         <title>Personal Website - Demos</title>
         <link rel="stylesheet" href="CSS/main.css" />
         <link rel="stylesheet" href="CSS/demo_selectionbar.css" />
-        <link rel="stylesheet" href="CSS/demo_connectfour.css" />
+        <link rel="stylesheet" href="CSS/demo_converter.css" />
     </head>
     <body>
         <div class="menubar">
@@ -54,18 +54,45 @@
             </div>
             
             <div class="demo-description">
-                <h1>Image Scaling</h1>
-                <p>Spiele "4-Gewinnt" gegen den Computer.</p>
-                <p>Hier habe ich ein Java Projekt von mir in Javascript übersetzt und an die Wiedergabe im Browser angepasst.</p>
+                <h1>Number Base Converter</h1>
+                <p>Simples Skript, das dem Umwandeln von Zahlenwerten in andere Zahlensysteme dient.</p>
             </div>
             
-            <div class="demo-container" id="canvas-container">
-                <canvas id="canvas-demo" width=800 height=800></canvas>
-                <input type="range" min="50" max="150" class="slider" id="demo-slider" />
-<!--                <button id="demo-startbutton">Start</button>-->
+            <div class="demo-container">
+                <div class="converter-container">
+                 <label for="converter-input">Input:</label>
+                    <input type="text" class="demo-input" id="converter-input" name="converter-input" />
+                </div>
+                
+                <div class="converter-container">
+                    <p>Convert from</p>
+                    <label for="binary-from">Binary:</label>
+                    <input type="radio" id="binary-from" name="radiogroup-from" value="bin" checked />
+                    <label for="decimal-from">Decimal:</label>
+                    <input type="radio" id="decimal-from" name="radiogroup-from" value="dec" />
+                    <label for="hex-from">Hexadecimal:</label>
+                    <input type="radio" id="hex-from" name="radiogroup-from" value="hex" />
+                </div>
+
+                <div class="converter-container">
+                    <p>to</p>
+                    <label for="binary-to">Binary:</label>
+                    <input type="radio" id="binary-to" name="radiogroup-to" value="bin" checked />
+                    <label for="decimal-to">Decimal:</label>
+                    <input type="radio" id="decimal-to" name="radiogroup-to" value="dec" />
+                    <label for="hex-to">Hexadecimal:</label>
+                    <input type="radio" id="hex-to" name="radiogroup-to" value="hex" />
+                </div>
+                <div class="converter-container">
+                    <button id="converter-button">convert</button>
+                </div>
+                
+                <div class="converter-container">
+                    <p id="converter-output"></p>
+                </div>
             </div>
         </div>
         
-        <script src="js/demo_scaling.js" type="text/javascript"></script>
+        <script src="js/demo_converter.js" type="text/javascript"></script>
     </body>
 </html>

@@ -7,8 +7,7 @@
     border-radius: 35px;
     border: 10px solid #dfe4eb;
     padding: 20px;
-    min-width: 400px;
-    max-width: 800px;
+    width: 800px;
 }
 
 .demo-container {
@@ -20,21 +19,32 @@
     border: 10px solid #dfe4eb;
     padding: 20px;
     width: 800px;
-    height: 800px;
-    overflow: scroll;
+    height: 600px;
+    font-size: 20px;
+    color: white;
 }
 
-.demo-container button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.converter-container {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.converter-container input{
+    margin-right: 20px;
+}
+
+.converter-container button {
+    margin-left: 20px;
     font-size: 30px;
     padding: 10px 20px;
     border-radius: 35px;
     border: 10px solid #dfe4eb;
     background-color: black;
     color: white;
+}
+
+.converter-container p {
+    font-size: 25px;
 }
 
 .demo-container button:hover {

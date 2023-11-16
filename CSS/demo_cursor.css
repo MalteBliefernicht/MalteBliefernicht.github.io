@@ -7,8 +7,7 @@
     border-radius: 35px;
     border: 10px solid #dfe4eb;
     padding: 20px;
-    min-width: 400px;
-    max-width: 800px;
+    width: 800px;
 }
 
 .demo-container {

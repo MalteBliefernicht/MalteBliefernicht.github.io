@@ -13,8 +13,7 @@
     height: 50px;
     margin-left: 10%;
     margin-right: 10%;
-    min-width: 400px;
-    max-width: 800px;
+    width: 800px;
 }
 
 .demo-selection a {

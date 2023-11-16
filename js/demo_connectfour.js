@@ -217,16 +217,6 @@ function clickOnCell(col) {
 
 function startAI() {
     getArrayOfPossibleMoves();
-    var str = "";
-    for (var i = 0; i < possibleAIMoves.length; i++) {
-        if (possibleAIMoves[i] != null) {
-            str = str + possibleAIMoves[i].col + " , ";
-        }
-        else {
-            str = str + "null , ";
-        }
-    }
-    console.log(str);
 
     if (processPossibleMoves(colorYellow, 4, 0)) {
         clickOnCell(finalCell.col);
