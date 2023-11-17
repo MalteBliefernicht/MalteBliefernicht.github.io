@@ -12,6 +12,7 @@
 
 .demo-container {
     position: relative;
+    z-index: 1;
     background-color: black;
     margin-top: 50px;
     margin-left: 10%;

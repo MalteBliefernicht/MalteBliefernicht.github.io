@@ -1,4 +1,4 @@
-.demo-selection {
+.project-selection {
     display:flex;
     z-index: 1;
     flex-direction: row;
@@ -17,7 +17,7 @@
     width: 800px;
 }
 
-.demo-selection a {
+.project-selection a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,6 @@
     height: inherit;
 }
 
-.demo-selection a:hover {
+.project-selection a:hover {
     background-color: #a3c1d6;
 }

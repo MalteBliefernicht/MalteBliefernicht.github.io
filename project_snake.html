@@ -1,10 +1,10 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Personal Website - Demos</title>
+        <title>Personal Website - Malte Bliefernicht</title>
         <link rel="stylesheet" href="CSS/main.css" />
-        <link rel="stylesheet" href="CSS/demo_selectionbar.css" />
-        <link rel="stylesheet" href="CSS/demo_connectfour.css" />
+        <link rel="stylesheet" href="CSS/project_selectionbar.css" />
+        <link rel="stylesheet" href="CSS/project.css" />
     </head>
     <body>
         <div class="menubar">
@@ -47,24 +47,28 @@
         </div>
         
         <div class="content">
-            <div class="demo-selection">
-                <a href="/demo_cursor.html">Follow The Cursor</a>
-                <a href="/demo_connectfour.html">Connect Four</a>
-                <a href="/demo_converter.html">Number Base Converter</a>
+            <div class="project-selection">
+                <a href="project_mosaic.html">Photo Mosaic Creator</a>
+                <a href="project_scale.html">Image Scaling</a>
+                <a href="project_paint.html">Paint Clone</a>
+                <a href="project_snake.html">Snake</a>
             </div>
             
-            <div class="demo-description">
-                <h1>Connect Four</h1>
-                <p>Spiele "4-Gewinnt" gegen den Computer.</p>
-                <p>Hier habe ich ein Java Projekt von mir in Javascript übersetzt und an die Darstellung im Browser angepasst.</p>
+            <div class="project-description">
+                <h1>Snake</h1>
+                <p>Eines meiner ersten richtigen Programmierprojekte war ein Terminal-Spiel des Klassikers "Snake", geschrieben in Python. Dies stellte damals eine riesige Herausforderung und einen großen Erfolg für mich dar. </p>
+                <p>Vor ein paar Monaten habe ich interessehalber eine zweite Version in Java geschrieben. Es ging mir darum, einen Vergleich zur damaligen Erfahrung zu ziehen. Die Entwicklung der neuen Version ging mir deutlich schneller von der Hand und das Ergebnis ist um Längen simpler und besser strukturiert.</p>
+                
+                <a href="https://github.com/MalteBliefernicht/SnakeTheGame.git">GitHub Repository</a>
             </div>
             
-            <div class="demo-container" id="canvas-container">
-                <canvas id="canvas-demo"></canvas>
-                <button id="demo-startbutton">Start</button>
+            <div class="project-container">
+                <img src="images/screenshots/Snake/1.jpg">
+            </div>
+            
+            <div class="project-container">
+                <img src="images/screenshots/Snake/2.jpg">
             </div>
         </div>
-        
-        <script src="js/demo_connectfour.js" type="text/javascript"></script>
     </body>
 </html>
