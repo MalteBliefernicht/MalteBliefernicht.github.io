@@ -521,7 +521,7 @@ function changePlayer() {
         currentColor = colorYellow;
         setTimeout(function() {
             startAI();
-        }, 500);
+        }, 100);
     }
     else {
         currentPlayer = playerOne;
