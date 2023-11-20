@@ -26,6 +26,11 @@
     color: white;
     font-size: 25px;
     height: inherit;
+    border-right: 1px solid #dfe4eb;
+}
+
+.demo-selection a:last-child {
+    border-right: none;
 }
 
 .demo-selection a:hover {

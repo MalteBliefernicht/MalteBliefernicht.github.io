@@ -26,6 +26,11 @@
     color: white;
     font-size: 20px;
     height: inherit;
+    border-right: 1px solid #dfe4eb;
+}
+
+.project-selection a:last-child {
+    border-right: none;
 }
 
 .project-selection a:hover {
