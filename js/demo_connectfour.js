@@ -501,6 +501,7 @@ function drawEndscreen(message) {
     container.style.border = "10px solid #dfe4eb";
     container.style.borderRadius = "35px";
     container.style.paddingTop = "20px";
+    container.style.opacity = "0.7";
 
     container.append(text);
     container.append(button);
