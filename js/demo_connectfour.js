@@ -294,7 +294,7 @@ function checkSurroundingsLeftToRight(cell, color, number, offset) {
     
     for (var i = -1 * reach; i <= reach; i++) {
         if (col + i >= 0 && col + i < gridCols && row + i >= 0 && row + i < gridRows) {
-            if (gridCellArray[col + i][row + i] == color) {
+            if (gridCellArray[col + i][row + i].color == color) {
                 counter++;
             } else if (col + i == col && row + i == row) {
                 counter++;
