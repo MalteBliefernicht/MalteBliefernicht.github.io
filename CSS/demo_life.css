@@ -1,0 +1,41 @@
+.demo-description {
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 35px;
+    border: 10px solid #dfe4eb;
+    padding: 20px;
+    width: 800px;
+}
+
+.demo-container {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 10%;
+    border-radius: 35px;
+    border: 10px solid #dfe4eb;
+    padding: 20px;
+    width: 800px;
+    height: 800px;
+}
+
+.demo-container button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 10px solid #dfe4eb;
+    background-color: black;
+    color: white;
+}
+
+.demo-container button:hover {
+    background-color: #a3c1d6;
+}

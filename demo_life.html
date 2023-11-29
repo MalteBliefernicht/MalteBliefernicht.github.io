@@ -5,7 +5,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="images/smile.png">
         <link rel="stylesheet" href="CSS/main.css" />
         <link rel="stylesheet" href="CSS/demo_selectionbar.css" />
-        <link rel="stylesheet" href="CSS/demo_cursor.css" />
+        <link rel="stylesheet" href="CSS/demo_life.css" />
     </head>
     <body>
         <div class="menubar">
@@ -56,9 +56,13 @@
             </div>
             
             <div class="demo-description">
-                <h1>Follow The Cursor</h1>
-                <p>Eine simple Demo, die meine Fähigkeit zur Entwicklung von Algorithmen demonstrieren soll.</p>
-                <p>Start drücken und die kleinen Fähnchen mit dem Cursor "lenken". Betätigen der linken Maustaste löst einen Welleneffekt aus.</p>
+                <h1>Game Of Life</h1>
+                <p>Meine Javascript-Version des klassischen Programmierprojekts.</p>
+                <p>Die Regeln sind sicherlich so gut wie jedem Programmierer bekannt, aber dennoch:</p>
+                <p>1. Eine lebendige Zelle stirbt, wenn sie weniger als zwei lebendige Nachbarzellen hat.</p>
+                <p>2. Eine lebendige Zelle mit zwei oder drei lebendigen Nachbarn lebt weiter.</p>
+                <p>3. Eine lebendige Zelle mit mehr als drei lebenden Nachbarzellen stirbt im nächsten Zeitschritt.</p>
+                <p>4. Eine tote Zelle wird wiederbelebt, wenn sie genau drei lebende Nachbarzellen hat.</p>
             </div>
             
             <div class="demo-container" id="canvas-container">
@@ -67,6 +71,6 @@
             </div>
         </div>
         
-        <script src="js/demo_cursor.js" type="text/javascript"></script>
+        <script src="js/demo_life.js" type="text/javascript"></script>
     </body>
 </html>
