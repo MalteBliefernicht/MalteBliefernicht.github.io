@@ -152,6 +152,7 @@ function startPhaseOne() {
 function endPhaseOne() {
     removeMouseMoveHandler();
     removeMouseClickHandler();
+    deleteHover();
 }
 
 
@@ -266,6 +267,15 @@ function killAllCells() {
     for (var y = 0; y < cells.length; y++) {
         for (var x = 0; x < cells[y].length; x++) {
             cells[y][x].setAlive(false);
+        }
+    }
+}
+
+
+function deleteHover() {
+    for (var y = 0; y < cells.length; y++) {
+        for (var x = 0; x < cells[y].length; x++) {
+            cells[y][x].setHover(false);
         }
     }
 }
