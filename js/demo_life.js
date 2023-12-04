@@ -282,9 +282,13 @@ function deleteHover() {
 
 
 function setCellsAtRandom() {
+    var max = 50;
+    var min = 10;
+    var cutOff = Math.floor(Math.random() * (max - min + 1) + min);
+    
     for (var y = 0; y < cells.length; y++) {
         for (var x = 0; x < cells[y].length; x++) {
-            if (Math.round(Math.random()) == 0) {
+            if (Math.random() * 100 < cutOff) {
                 cells[y][x].setAlive(true);
             }
             else {
