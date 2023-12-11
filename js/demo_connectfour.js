@@ -22,8 +22,8 @@ var gridRows = 6;
 var diameter = canvas.width / gridCols;
 var radius = diameter / 2;
 
-var playerOne = "Player 1";
-var playerTwo = "Player 2";
+var playerOne = "Human";
+var playerTwo = "AI";
 var currentPlayer = playerOne;
 
 var colorWhite = "white";
@@ -90,10 +90,10 @@ function mouseClickEvent(event) {
     }
 
     checkBoardAfterTurn();
+    draw();
     
     if (gameRunning) {
         changePlayer();
-        draw();
     }
 }
 
@@ -272,13 +272,19 @@ function processPossibleFutureMoves(color, number, offset) {
     for (var col = 0; col < possibleAIMoves.length; col++) {
         if (possibleAIMoves[col] != null) {
             if (checkSurroundingsLeftToRight(possibleAIMoves[col], color, number, offset)) {
-                possibleAIMoves[col] = null;
+                if (!onlyOneLeft()) {
+                    possibleAIMoves[col] = null;
+                }
                 return true;
             } else if (checkSurroundingsRightToLeft(possibleAIMoves[col], color, number, offset)) {
-                possibleAIMoves[col] = null;
+                if (!onlyOneLeft()) {
+                    possibleAIMoves[col] = null;
+                }
                 return true;
             } else if (checkSurroundingsHorizontal(possibleAIMoves[col], color, number, offset)) {
-                possibleAIMoves[col] = null;
+                if (!onlyOneLeft()) {
+                    possibleAIMoves[col] = null;
+                }
                 return true;
             }
         }
@@ -386,6 +392,7 @@ function determineAlternativeOption() {
     for (var col = 0; col < possibleAIMoves.length; col++) {
         if (possibleAIMoves[col] != null) {
             var score = possibleAIMoves[col].score;
+            
             if (score > highestScore) {
                 highestScore = score;
             }
@@ -396,6 +403,7 @@ function determineAlternativeOption() {
     for (var col = 0; col < possibleAIMoves.length; col++) {
         if (possibleAIMoves[col] != null) {
             var score = possibleAIMoves[col].score;
+
             if (score == highestScore) {
                 highestScoreList.push(possibleAIMoves[col]);
             }
@@ -403,6 +411,7 @@ function determineAlternativeOption() {
     }
 
     var randomInt = Math.floor(Math.random() * highestScoreList.length);
+
     finalCell = highestScoreList[randomInt];
 
     for (var col = 0; col < possibleAIMoves.length; col++) {
@@ -452,6 +461,22 @@ function twoOfSameColor(color, number, offset) {
             possibleAIMoves[col].score += score;
         }
     }
+}
+
+function onlyOneLeft() {
+    var counter = 0;
+    
+    for (var i = 0; i < possibleAIMoves.length; i++) {
+        if (possibleAIMoves[i] != null) {
+            counter++;
+        }
+    }
+    
+    if (counter == 1) {
+        return true;
+    }
+    
+    return false;
 }
 
 function gameOver(draw) {

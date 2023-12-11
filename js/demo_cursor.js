@@ -158,10 +158,10 @@ function start() {
 }
 
 function draw() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "white";
-    context.fillRect(0, 0, canvas.width, canvas.height);
     context.fillStyle = "black";
+    context.strokeStyle = "white";
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillRect(0, 0, canvas.width, canvas.height);
     context.beginPath();
     
     headsArray.forEach((head) => {
